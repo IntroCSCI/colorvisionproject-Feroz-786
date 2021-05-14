@@ -12,7 +12,7 @@
 
 ### v1.0 Updates
 
-*Coming soon*
+*Previously my program was able to generate random color with the help of the functions and write those colors in the given files but now rather than having the function generate a random color, I used one of the safe palettes from the useful resources folder and assign those colors according to the number that my program generates. First, in the main function on line 115, I used a do-while (); loop to have my program give me a random number from 0-12 and given that number the program calls the function named '''colorGenerator(current);''' function and assign color according to the number. After that, it takes that color and uses the class defined in the .h file and call one of its function to determine a bool statement to decide whether that color is safe to use or not. Additionally, the program calls one more function that belongs to the class and has it assign that color to one of its private variables. so, we can use that color later to write into the file. After that, my function writes to the file by also calling the same object class and have a different function write the colors to the file according to the statement that determines whether the color is safe to use or not.*
 
 
 ## Developer
@@ -32,27 +32,29 @@ Here is an example of the program running:
 
 ```
 !!!
-How many colors would you like in your palete(2-5) ? 
-1
-Please enter a number between(2-5)
-How many colors would you like in your palete(2-5) ? 
+How many colors would you like to generat in your palette (2-5) ? 
 5
 Enter a name of a file where you want to save the palette to, ending with(.svg)? 
-color.sve
-Enter a valid file name ending with .svg?
-COLOR.SVG
-The name of the file is color.svg (yes or no)?
+cop.svg
+The name of the file is cop.svg (yes or no)?
 no
 what would you like to name the file?
-Colors.svg
-The name of the file is colors.svg (yes or no)?
+svp.SVG
+The name of the file is svp.svg (yes or no)?
+no
+what would you like to name the file?
+cvp.svg
+The name of the file is cvp.svg (yes or no)?
 yes
-colors.svg has been opened 
-D4E8D2
-721CC6
-3DD794
-EBBB8A
-0D3126
+cvp.svg has been opened 
+
+Here are 5 colors that have been generated. 
+1: E995AD (not safe to use)
+2: C694EA (not safe to use)
+3: 000000 (safe to use)
+4: E69F00 (safe to use)
+5: FFFFFF (safe to use)
+
 File has been closed
  !!!
 ```
@@ -113,4 +115,5 @@ Take in an int and stream with pass by reference and write colors to the file.
 
 ### Classes
 
-*Coming in version 1.0*
+*In my class, I used the private member to make the members of the class protected and used public, to access those variables from private and use that variable to determine if the color is safe or not. In private, I defined several variables such as strings, vectors, and int to represent colors. I used an int for the numbers of colors and string and vector to store the given color. In public, I defined the constructor, color(int); when this constructor is called it takes the given int and assigns its value to one of the strings named, numbrOfColors. I used a constructor with the combinations of parameters to assign variables from the private to the given parameter. I also defined several functions in public. For example, I used this function '''void setGeneratColor(vector<string>);''' to take a vector of string and assign that value to one of the variables named generator. Next, '''bool isValid()''' this function takes the vector that has been defined by '''void setGeneratColor(vector<string>);''' this function and compares that vector with the ones that have been initialized and return true if it is safe to use or return false if it is not. After that we have '''void writeInFile(fstream&);''' this function takes fstream with pass by reference and writes the generator that has been defined previously to the file. And lastly, ''' void display();'' this function just display to the user what colors are been writing to the file and whether it is safe or not.
+I think my class shows appropriate use of object_oriented design because my class follows the principle of abstraction, encapsulation, and information hiding. I tried making my class general which can be used with different objects, encapsulation, and information hiding, I tried using public-private members to best design my class. My class can be reusable with the different objects to determine if that object is safe or not. *
